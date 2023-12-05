@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS earning (
+   id SERIAL PRIMARY KEY,
+   value NUMERIC(10, 2) NOT NULL,
+   date DATE NOT NULL,
+   user_id UUID REFERENCES users(id)
+);

@@ -19,14 +19,20 @@ import java.time.LocalDate;
 public class Expense {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String description;
     private BigDecimal value;
     private LocalDate date;
-
     @ManyToOne
     @JoinColumn(name = "user_id")
     private User user;
+
+    public Expense(String description, BigDecimal value, LocalDate date, User user){
+        this.description = description;
+        this.value = value;
+        this.date = date;
+        this.user = user;
+    }
 
 }

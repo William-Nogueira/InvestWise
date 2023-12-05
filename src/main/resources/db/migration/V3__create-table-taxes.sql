@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS taxes (
+   id SERIAL PRIMARY KEY,
+   tax NUMERIC(10, 2) NOT NULL,
+   inflation NUMERIC(10, 2) NOT NULL
+);
